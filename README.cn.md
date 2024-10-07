@@ -1,4 +1,4 @@
-简体中文 | [English](https://www.npmjs.com/package/webcomponents-frame) 
+简体中文 | [English](https://github.com/892462856/webcomponents-frame) 
 
 # Web components frame
 
