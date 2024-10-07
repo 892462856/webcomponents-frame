@@ -1,0 +1,28 @@
+{
+  "name": "webcomponents-frame",
+  "version": "1.0.0",
+  "description": "Web Components增强框架。核心是一个组件基类，提供响应式状态、作用域插槽、作用域样式和声明式模板系统。采用Proxy监听+精准更新策略。轻松、快速编写Web Component，可扩展、可插拔和跨框架兼容。",
+  "author": "liaosuyin",
+  "private": false,
+  "main": "packages/component.mini.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "keywords": [
+    "web components",
+    "mvvm",
+    "声明式模板",
+    "双向绑定",
+    "相应式状态",
+    "跨框架兼容"
+  ],
+  "license": "MIT"
+}

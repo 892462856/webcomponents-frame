@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <title>Web Components ++ 框架演示</title>
+  </head>
+  <body>
+
+    <cmpt-page></cmpt-page>
+
+    <template id="cmpt-page-template">
+      <style>
+        :host{
+          display: block;
+          margin: auto;
+          width: 400px;
+          padding: 10px;
+          background: #eef;
+        }
+        h3{
+          display: inline-block;
+        }
+      </style>
+      <cmpt-text :model="this.name" label="姓名" placeholder="请输入你的姓名"></cmpt-text>
+      <div>
+        <h3 class="city">选择城市：</h3>
+        <span>{{this.city}}</span>
+      </div>
+      <cmpt-tree @select="this.setCity">
+        <div slot="slot1" :slot-data="{item,i,d}">
+          {{d}}|{{i}} {{item.name}}
+        </div>
+      </cmpt-tree>
+    </template>
+    <template id="cmpt-text-template">
+      <style>
+        :host > div{
+          display: grid;
+          grid-template-columns: ---this-labelSetting-width 1fr;
+        }
+        :host > div.vertical{
+          grid-template-columns: 1fr !important;
+        }
+        label[align=---this-labelSetting-align]{
+          text-align: ---this-labelSetting-align;
+        }
+      </style>
+      <div :class="{vertical:this.vertical}" :style="{
+        border:'1px solid #ccc',
+        borderWidth: this.styles.borderSize,
+        borderRadius: this.styles.borderRadius,
+        borderColor: this.styles.borderColor,
+      }">
+        <label :align="this.labelSetting.align">{{this.label}}</label>
+        <input :model="this.value" type="text" :placeholder="this.placeholder">
+      </div>
+    </template>
+    <template id="cmpt-tree-template">
+      <style>
+        li,label{
+          cursor: pointer;
+        }
+      </style>
+      <ul>
+        <li :for="(item,i,d) in this.list" @click.stop="this.submitValue($event,{item,i,d})">
+          <slot name="slot1" :slot-data="{item,i,d}">
+            <div>
+              <label>{{d}}|{{i}}.</label>
+              <label>{{item.code}}</label>
+              <label>{{item.name}}</label>
+            </div>
+          </slot>
+          <ul :sub-for="item.children"></ul>
+        </li>
+      </ul>
+    </template>
+
+    <script type="module" src="./main.js"></script> 
+  </body>
+</html>

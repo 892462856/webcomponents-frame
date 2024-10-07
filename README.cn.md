@@ -1,21 +1,21 @@
-English | [简体中文](https://gitee.com/eljs/webcomponents-frame) 
+简体中文 | [English](https://www.npmjs.com/package/webcomponents-frame) 
 
-# Web components 框架
+# Web components frame
 
-### Introduce
-Web Components enhancement framework. The core is a component base class that provides reactive state, scoped slots, scoped styles, and a declarative template system, along with fine-grained update strategies for improved efficiency. It allows for easy and rapid development of Web Components that are extensible, pluggable, and cross-framework compatible.
+### 介绍
+Web Components增强框架。核心是一个组件基类，提供响应式状态、作用域插槽、作用域样式和声明式模板系统，细粒度更新策略，效率更高。轻松、快速编写Web Component，可扩展、可插拔和跨框架兼容。
 
-### Install
+### 安装
     npm install webcomponents-frame
 
-### Instruction set
--   ***:if***  = "this.prop===yyy"
--   ***:else-if*** = "this.prop===hhh"
+### 指令集
+-   ***:if***  = "返回bool值的表达式/属性"
+-   ***:else-if*** = "返回bool值的表达式/属性"
 -   ***:else***
--   ***:for*** = "(item,index,deep) in this.list" *(deep：The depth value during recursive binding.)*
--   ***:sub-for*** = "item.children" *(Recursive list binding)*
--   ***:show*** = "bool valule"
--   ***:model*** = "this.prop"
+-   ***:for*** = "(item,index,deep) in this.list" *(deep：递归绑定时的深度值；this.list：Array/Object/Number；item,index,deep可随意命名)*
+-   ***:sub-for*** = "item.children" *(递归列表绑定)*
+-   ***:show*** = "返回bool值的表达式/属性"
+-   ***:model*** = "属性"
 -   ***:slot-data*** = "obj"
 -   ***:class*** = "{class1:true,class2:false}"
 -   ***:style*** = "{borderWidth:'2px',borderColor:'#00f'}"
@@ -27,11 +27,11 @@ Web Components enhancement framework. The core is a component base class that pr
 ### API
 -   addEffector，nextTick，emitEvent
 
-### Lifecycle
+### 生命周期
 -   attributeChangedCallback，constructor，initTemplate，connectedCallback，firstConnectedCallback，disconnectedCallback
 
-### Usage
-##### > main.js
+### 使用示例
+##### *> main.js*
 ```javascript
 import { Component } from "webcomponents-frame"
 
@@ -130,7 +130,7 @@ customElements.define('cmpt-page', PageComponent)
 
 
 ```
-##### > index.html
+##### *> index.html*
 ```html
 <!doctype html>
 <html lang="en">
@@ -140,7 +140,7 @@ customElements.define('cmpt-page', PageComponent)
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
-    <title>Web Component ++frame demonstration</title>
+    <title>Web Component Plus框架演示</title>
   </head>
   <body>
 
@@ -159,9 +159,9 @@ customElements.define('cmpt-page', PageComponent)
           display: inline-block;
         }
       </style>
-      <cmpt-text :model="this.name" label="name" placeholder="Please enter your name."></cmpt-text>
+      <cmpt-text :model="this.name" label="姓名" placeholder="请输入你的姓名"></cmpt-text>
       <div>
-        <h3 class="city">Select a city：</h3>
+        <h3 class="city">选择城市：</h3>
         <span>{{this.city}}</span>
       </div>
       <cmpt-tree @select="this.setCity">
@@ -213,15 +213,15 @@ customElements.define('cmpt-page', PageComponent)
       </ul>
     </template>
 
-    <script type="module" src="./main.js"></script> 
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
 
 ```
-### Documentation
+### 教程/文档
 - 访问 [http://www.webcomponentsframe.com](http://www.webcomponentsframe.com)
 
-### Code
+### 源码
 -  gitee [https://gitee.com/eljs/webcomponentsframe](https://gitee.com/eljs/webcomponentsframe)
 -  github [https://gitee.com/eljs/webcomponentsframe](https://gitee.com/eljs/webcomponentsframe)
 
