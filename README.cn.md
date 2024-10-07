@@ -223,7 +223,7 @@ customElements.define('cmpt-page', PageComponent)
 
 ### 源码
 -  gitee [https://gitee.com/eljs/webcomponents-frame](https://gitee.com/eljs/webcomponents-frame)
--  github [https://gitee.com/eljs/webcomponents-frame](https://gitee.com/eljs/webcomponents-frame)
+-  github [https://github.com/892462856/webcomponents-frame](https://github.com/892462856/webcomponents-frame)
 
 ### License
 MIT
