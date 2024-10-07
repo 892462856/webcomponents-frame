@@ -3,7 +3,7 @@
 # Web components frame
 
 ### 介绍
-Web Components增强框架。核心是一个组件基类，提供响应式状态、作用域插槽、作用域样式和声明式模板系统，细粒度更新策略，效率更高。轻松、快速编写Web Component，可扩展、可插拔和跨框架兼容。
+Web Components增强框架。核心是一个组件基类，提供响应式状态、作用域插槽、作用域样式和声明式模板系统；采用Proxy监听+细粒度更新策略。轻松、快速编写Web Component，可扩展、可插拔和跨框架。
 
 ### 安装
     npm install webcomponents-frame
@@ -222,8 +222,8 @@ customElements.define('cmpt-page', PageComponent)
 - 访问 [http://www.webcomponentsframe.com](http://www.webcomponentsframe.com)
 
 ### 源码
--  gitee [https://gitee.com/eljs/webcomponentsframe](https://gitee.com/eljs/webcomponentsframe)
--  github [https://gitee.com/eljs/webcomponentsframe](https://gitee.com/eljs/webcomponentsframe)
+-  gitee [https://gitee.com/eljs/webcomponents-frame](https://gitee.com/eljs/webcomponents-frame)
+-  github [https://gitee.com/eljs/webcomponents-frame](https://gitee.com/eljs/webcomponents-frame)
 
 ### License
 MIT
