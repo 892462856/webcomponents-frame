@@ -3,7 +3,24 @@ English | [简体中文](https://gitee.com/eljs/webcomponents-frame)
 # Web components 框架
 
 ### Introduce
-Web Components enhancement framework. The core is a component base class that provides reactive state, scoped slots, scoped styles, and a declarative templating system; it utilizes Proxy listening and a fine-grained update strategy. Easily and quickly write Web Components that are extensible, pluggable, and cross-framework.
+This is an enhanced framework based on **Web Components**, featuring:
+
+#### ✨ Core Capabilities
+- Component base class with full MVVM support
+- Reactive state management  
+- Scoped slots
+- Scoped styling
+- Declarative template system
+
+#### 🚀 Performance Advantages
+- **Proxy-based observation** + **fine-grained updates**
+- **Pioneering recursive binding** mechanism
+- Extremely lightweight and efficient
+
+#### 💡 Framework Highlights
+- Effortless and rapid Web Component development
+- Highly **extensible** and **pluggable**
+- Seamless **cross-framework** compatibility
 
 ### Install
     npm install webcomponents-frame
